@@ -33,7 +33,7 @@ def solve_inexact(letters, current_len):
             if possibility in blacklist:
                 continue
 
-            answer = input('Is ' + possibility + ' the correct word? (y/n)')
+            answer = input('Is ' + possibility + ' the correct word? (y/N)')
             if answer == 'y':
                 # The next step is to remove the characters that form the accepted word
                 for c in perm:
@@ -50,7 +50,7 @@ if __name__ == '__main__':
     while isStop == 'y':
         print(solve(input('Write the letters you wanna check against:').lower()))
 
-        isStop = input('Do you want to search another word? (y/N)').lower()
+        isStop = input('Do you want to search another word? (y/N/bonus)').lower()
 
         if isStop != 'n' and isStop != 'y' and isStop != 'bonus':
             print('Option not recognized. Exiting')
